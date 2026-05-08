@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "MenuDesk — Operational intelligence for cafes & restaurants",
+    "description": "MenuDesk is operational intelligence for cafes, bakeries, and restaurants across Southeast Asia. Menu engineering, food cost tracking, and demand forecasting — coming Q3 2026."
+  },
+  "nav": {
+    "language": "ภาษาไทย"
+  },
+  "hero": {
+    "badge": "Coming Q3 2026",
+    "title": "Operational intelligence for cafes, bakeries, and restaurants.",
+    "subtitle": "MenuDesk turns your POS data into a daily briefing — what's selling, what's costing you, and what to do about it. Built for Southeast Asia.",
+    "feature1Title": "Menu engineering",
+    "feature1Desc": "Know your stars, dogs, puzzles, and plowhorses. Price and position with confidence.",
+    "feature2Title": "Food cost tracking",
+    "feature2Desc": "Recipe-level cost monitoring as ingredient prices move. No more month-end surprises.",
+    "feature3Title": "Demand forecasting",
+    "feature3Desc": "Prep the right amount, staff the right shifts. Less waste, fewer 86s."
+  },
+  "integrations": {
+    "title": "Connecting to the POS systems you already use",
+    "subtitle": "Integrations coming with launch",
+    "comingSoon": "Coming soon"
+  },
+  "footer": {
+    "tagline": "Operational intelligence for SEA cafes & restaurants.",
+    "builtBy": "Built by Aurasea",
+    "rights": "All rights reserved."
+  }
+}

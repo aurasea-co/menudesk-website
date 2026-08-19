@@ -2,7 +2,7 @@
   "meta": {
     "title": "MenuDesk — find where your restaurant leaks money",
     "description": "Photograph your menu, see in 2 minutes which dishes make money and which lose it. No POS integration, no data entry, no signup. Free to try.",
-    "ogTitle": "Your best-selling dish might lose money on every plate",
+    "ogTitle": "Your best-selling dish might be losing money on plate after plate",
     "ogDescription": "MenuDesk reads your menu from a photo and shows where the money leaks. Free, no signup."
   },
   "nav": {
@@ -13,8 +13,8 @@
     "language": "ไทย"
   },
   "hero": {
-    "eyebrow": "For independent restaurants and cafés in Thailand",
-    "headline": "Your best-selling dish might lose money on every plate",
+    "eyebrow": "For shops in Thailand with a menu of their own",
+    "headline": "Your best-selling dish might be losing money on plate after plate",
     "subhead": "MenuDesk reads your menu from a photo and shows where the money leaks — which dishes earn, which quietly eat your margin. No stock counts. No spreadsheets.",
     "ctaPrimary": "Photograph your menu — free",
     "ctaSecondary": "See how it works",

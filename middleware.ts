@@ -5,6 +5,14 @@ export default createMiddleware({
   locales,
   defaultLocale,
   localePrefix: 'as-needed',
+  // Thai is the default, full stop — §19: "ไทยเป็นค่าเริ่มต้น อังกฤษเป็นตัวสำรอง".
+  //
+  // next-intl detects the locale from Accept-Language unless told not to, and a
+  // large share of Thai shop owners run their phone in English. Detection was
+  // therefore serving the English site to exactly the audience this product is
+  // written for: an `en-US` header redirected / to /en. English stays reachable
+  // through the header toggle, which is what "fallback" means here.
+  localeDetection: false,
 });
 
 // The funnel paths below are excluded on purpose. They are not pages of this

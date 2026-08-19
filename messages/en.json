@@ -1,30 +1,133 @@
 {
   "meta": {
-    "title": "MenuDesk — Operational intelligence for cafes & restaurants",
-    "description": "MenuDesk is operational intelligence for cafes, bakeries, and restaurants across Southeast Asia. Menu engineering, food cost tracking, and demand forecasting — coming Q3 2026."
+    "title": "MenuDesk — find where your restaurant leaks money",
+    "description": "Photograph your menu, see in 2 minutes which dishes make money and which lose it. No POS integration, no data entry, no signup. Free to try.",
+    "ogTitle": "Your best-selling dish might lose money on every plate",
+    "ogDescription": "MenuDesk reads your menu from a photo and shows where the money leaks. Free, no signup."
   },
   "nav": {
-    "language": "ภาษาไทย"
+    "howItWorks": "How it works",
+    "pricing": "Pricing",
+    "honesty": "Accuracy",
+    "cta": "Try free",
+    "language": "ไทย"
   },
   "hero": {
-    "badge": "Coming Q3 2026",
-    "title": "Operational intelligence for cafes, bakeries, and restaurants.",
-    "subtitle": "MenuDesk turns your POS data into a daily briefing — what's selling, what's costing you, and what to do about it. Built for Southeast Asia.",
-    "feature1Title": "Menu engineering",
-    "feature1Desc": "Know your stars, dogs, puzzles, and plowhorses. Price and position with confidence.",
-    "feature2Title": "Food cost tracking",
-    "feature2Desc": "Recipe-level cost monitoring as ingredient prices move. No more month-end surprises.",
-    "feature3Title": "Demand forecasting",
-    "feature3Desc": "Prep the right amount, staff the right shifts. Less waste, fewer 86s."
+    "eyebrow": "For independent restaurants and cafés in Thailand",
+    "headline": "Your best-selling dish might lose money on every plate",
+    "subhead": "MenuDesk reads your menu from a photo and shows where the money leaks — which dishes earn, which quietly eat your margin. No stock counts. No spreadsheets.",
+    "ctaPrimary": "Photograph your menu — free",
+    "ctaSecondary": "See how it works",
+    "trustLine": "No signup · No card · Takes 2 minutes",
+    "noPos": "Works without a POS"
   },
-  "integrations": {
-    "title": "Connecting to the POS systems you already use",
-    "subtitle": "Integrations coming with launch",
-    "comingSoon": "Coming soon"
+  "problem": {
+    "title": "Most owners know their revenue. Almost none know their margin per dish.",
+    "body": "Money comes in every day, but nothing tells you whether your most popular plate is earning or bleeding. Ingredient costs drift upward quietly, and you find out at the end of the month when nothing is left.",
+    "points": {
+      "one": "Popular dishes with margins thin enough to disappear",
+      "two": "Supplier price rises nobody noticed",
+      "three": "Dead stock turning into waste"
+    }
+  },
+  "howItWorks": {
+    "title": "How it works",
+    "subtitle": "Three steps, two minutes",
+    "step1": {
+      "title": "Photograph your whole menu",
+      "body": "Open the link, shoot every menu page. No signup, no login."
+    },
+    "step2": {
+      "title": "AI reads it and estimates cost",
+      "body": "We read dish names and the prices already printed on your menu, then estimate ingredient cost from standard recipes and market prices."
+    },
+    "step3": {
+      "title": "See which dishes to worry about",
+      "body": "A green / amber / red ranking, each with a concrete action to take."
+    }
+  },
+  "honesty": {
+    "title": "We give you a range, not fake precision",
+    "body": "The free result is an estimate. We read your real selling prices off the menu, but costs come from standard recipes and market prices, so they can be off by roughly 30–50%. That is why every figure is shown as a range with a confidence level, labelled as an estimate.",
+    "emphasis": "Trust the ranking, not the exact baht figure — precise numbers need your real recipes and your real purchase prices.",
+    "linkLabel": "How we calculate this"
+  },
+  "notInventory": {
+    "title": "This is not an inventory system",
+    "body": "Inventory systems track stuff. MenuDesk tracks money. We will not ask you to count things every day, because nobody keeps that up.",
+    "colInventory": "Typical inventory tool",
+    "colMenudesk": "MenuDesk",
+    "row1": {
+      "label": "Answers",
+      "inventory": "How much stock do I have?",
+      "menudesk": "Where is my money leaking, and what do I do?"
+    },
+    "row2": {
+      "label": "Data comes from",
+      "inventory": "You, counting and typing",
+      "menudesk": "What you already do"
+    },
+    "row3": {
+      "label": "What happens",
+      "inventory": "Abandoned by week two",
+      "menudesk": "Stays in use because there's almost nothing to do"
+    }
+  },
+  "compatibility": {
+    "title": "Works with any restaurant",
+    "body": "POS or no POS. If you already have a sales system, upload a CSV export for sharper numbers. If you don't, daily totals are enough to start.",
+    "note": "No need to change the system you already use."
+  },
+  "pricing": {
+    "title": "Pricing",
+    "subtitle": "Start free. Pay when you want real numbers and want it watching for you.",
+    "perMonth": "/month",
+    "free": {
+      "name": "Free",
+      "price": "฿0",
+      "tagline": "See where the money leaks",
+      "f1": "One full-restaurant analysis",
+      "f2": "Green / amber / red ranking",
+      "f3": "Figures shown as estimated ranges",
+      "cta": "Start now"
+    },
+    "tier2": {
+      "name": "Accurate",
+      "price": "฿199",
+      "promo": "First month ฿99",
+      "tagline": "Real numbers from your real costs",
+      "f1": "Cost and margin per dish from your recipes and purchase prices",
+      "f2": "Test a price change and see the effect",
+      "f3": "Menu-engineering matrix",
+      "cta": "Choose this"
+    },
+    "tier3": {
+      "name": "Watched",
+      "price": "฿399",
+      "tagline": "Stop checking. It tells you on LINE.",
+      "f1": "Weekly bleed summary to LINE",
+      "f2": "Instant alert when a supplier raises prices",
+      "f3": "Dead-stock flags",
+      "cta": "Choose this"
+    },
+    "footnote": "Cancel anytime. Prices include tax. Pay by PromptPay or card."
+  },
+  "founder": {
+    "title": "Built by people who run a shop",
+    "body": "MenuDesk started in our own café in Korat. We used it to find our own loss-making dishes before we gave it to anyone else. It isn't software written by people who have never stood behind a counter.",
+    "signature": "Aurasea Co., Ltd. · Nakhon Ratchasima"
+  },
+  "finalCta": {
+    "title": "Want to know which of your dishes lose money?",
+    "body": "Photograph your menu and see the result in two minutes. Free, no signup.",
+    "button": "Photograph your menu — free"
   },
   "footer": {
-    "tagline": "Operational intelligence for SEA cafes & restaurants.",
+    "tagline": "Find where your restaurant leaks money",
     "builtBy": "Built by Aurasea",
-    "rights": "All rights reserved."
+    "rights": "© 2026 Aurasea Co., Ltd. All rights reserved.",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "contact": "Contact"
   }
 }

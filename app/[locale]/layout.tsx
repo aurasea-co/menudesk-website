@@ -30,9 +30,12 @@ export async function generateMetadata({
     title: t('title'),
     description: t('description'),
     metadataBase: new URL('https://menudesk.ai'),
+    // The share card carries the wound, not the product name: this is the text
+    // an owner sees when another owner forwards the link in LINE, and it is
+    // often the only sentence they read before deciding to tap.
     openGraph: {
-      title: t('title'),
-      description: t('description'),
+      title: t('ogTitle'),
+      description: t('ogDescription'),
       url: 'https://menudesk.ai',
       siteName: 'MenuDesk',
       locale: locale === 'th' ? 'th_TH' : 'en_US',
@@ -40,8 +43,8 @@ export async function generateMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      title: t('title'),
-      description: t('description'),
+      title: t('ogTitle'),
+      description: t('ogDescription'),
     },
   };
 }

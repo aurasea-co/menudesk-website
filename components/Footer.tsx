@@ -2,7 +2,6 @@ import { useTranslations } from 'next-intl';
 
 export function Footer() {
   const t = useTranslations('footer');
-  const year = new Date().getFullYear();
 
   return (
     <footer className="border-t border-aurasea-ink/10 bg-white/40 px-6 py-10 md:px-10 md:py-12">
@@ -49,7 +48,9 @@ export function Footer() {
       </div>
 
       <div className="mx-auto mt-8 max-w-6xl border-t border-aurasea-ink/8 pt-6 text-center text-xs text-aurasea-ink/50">
-        © {year} Aurasea. {t('rights')}
+        {/* `rights` carries the whole notice, year included — prefixing another
+            one here printed the copyright twice. */}
+        {t('rights')}
       </div>
     </footer>
   );

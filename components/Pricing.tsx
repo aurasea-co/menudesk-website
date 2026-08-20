@@ -2,14 +2,17 @@ import { useTranslations } from 'next-intl';
 import { ScanCta } from '@/components/ScanCta';
 import { SCAN_URL, scanUrlIsExternal } from '@/lib/scan-url';
 
-// Three tiers, visible. The ฿199 anchor cannot do its job if nobody sees a
-// price — which was the state of the old site.
+// Three tiers: free / ฿99 / ฿399. The ฿199 tier is retired.
 //
-// Every tier's button goes to the same place: photograph your menu. Paid tiers
-// are chosen inside the funnel, after the owner has seen their own numbers, so
-// a "buy" button here would be asking for money before showing the wound.
+// Feature lists are arrays and differ in length by tier, so they are read with
+// t.raw rather than numbered f1..fn keys — adding a bullet is then a copy edit,
+// not a code change, which is the whole reason strings live in messages/.
+//
+// Every button still goes to the free scan. Paid tiers are chosen inside the
+// funnel, once the owner has seen their own numbers; a checkout button here
+// would be asking for money before showing the leak.
 
-const TIERS = ['free', 'tier2', 'tier3'] as const;
+const TIERS = ['free', 'basic', 'pro'] as const;
 
 export function Pricing() {
   const t = useTranslations('pricing');
@@ -28,8 +31,8 @@ export function Pricing() {
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {TIERS.map((tier) => {
-            const featured = tier === 'tier2';
-            const promo = tier === 'tier2' ? t('tier2.promo') : null;
+            const featured = tier === 'basic';
+            const features = t.raw(`${tier}.features`) as string[];
 
             return (
               <div
@@ -49,25 +52,17 @@ export function Pricing() {
                     {t(`${tier}.price`)}
                   </span>
                   {tier !== 'free' && (
-                    <span className="text-sm text-aurasea-ink/50">
-                      {t('perMonth')}
-                    </span>
+                    <span className="text-sm text-aurasea-ink/50">{t('period')}</span>
                   )}
                 </div>
-
-                {promo && (
-                  <span className="mt-3 inline-flex self-start rounded-full bg-menudesk-ember/12 px-3 py-1 text-sm font-medium text-menudesk-ember">
-                    {promo}
-                  </span>
-                )}
 
                 <p className="mt-4 text-base leading-relaxed text-aurasea-ink/70">
                   {t(`${tier}.tagline`)}
                 </p>
 
                 <ul className="mt-6 flex-1 space-y-3">
-                  {(['f1', 'f2', 'f3'] as const).map((f) => (
-                    <li key={f} className="flex items-start gap-2.5">
+                  {features.map((feature) => (
+                    <li key={feature} className="flex items-start gap-2.5">
                       <svg
                         viewBox="0 0 24 24"
                         fill="none"
@@ -82,7 +77,7 @@ export function Pricing() {
                         />
                       </svg>
                       <span className="text-base leading-relaxed text-aurasea-ink/80">
-                        {t(`${tier}.${f}`)}
+                        {feature}
                       </span>
                     </li>
                   ))}
@@ -108,9 +103,7 @@ export function Pricing() {
           })}
         </div>
 
-        <p className="mt-8 text-center text-sm text-aurasea-ink/50">
-          {t('footnote')}
-        </p>
+        <p className="mt-8 text-center text-sm text-aurasea-ink/50">{t('prepaid')}</p>
       </div>
     </section>
   );

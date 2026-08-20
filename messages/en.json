@@ -1,49 +1,59 @@
 {
   "meta": {
-    "title": "MenuDesk — find where your restaurant leaks money",
-    "description": "Photograph your menu, see in 2 minutes which dishes make money and which lose it. No POS integration, no data entry, no signup. Free to try.",
-    "ogTitle": "Your best-selling dish might be losing money on plate after plate",
-    "ogDescription": "MenuDesk reads your menu from a photo and shows where the money leaks. Free, no signup."
+    "title": "MenuDesk — find where your restaurant leaks money, in-store and on the apps",
+    "description": "Photograph your menu and know in 2 minutes which dishes earn, which lose, and how far under-priced you are on the delivery apps. No POS, no signup — free to try.",
+    "ogTitle": "Same price on the app? You keep less than half the profit.",
+    "ogDescription": "MenuDesk reads your menu from a photo and tells you what to charge — in-store and on the apps. Free, no signup."
   },
   "nav": {
     "howItWorks": "How it works",
+    "delivery": "Delivery",
     "pricing": "Pricing",
     "honesty": "Accuracy",
     "cta": "Try free",
     "language": "ไทย"
   },
   "hero": {
-    "eyebrow": "For shops in Thailand with a menu of their own",
-    "headline": "Your best-selling dish might be losing money on plate after plate",
-    "subhead": "MenuDesk reads your menu from a photo and shows where the money leaks — which dishes earn, which quietly eat your margin. No stock counts. No spreadsheets.",
+    "eyebrow": "For restaurants and cafés with a storefront, across Thailand",
+    "headline": "Same price on the app? You keep less than half the profit.",
+    "subhead": "A 30% commission plus VAT eats your margin quietly, on every plate. MenuDesk reads your menu from a photo and tells you what to charge — in-store and on the apps.",
     "ctaPrimary": "Photograph your menu — free",
     "ctaSecondary": "See how it works",
     "trustLine": "No signup · No card · Takes 2 minutes",
-    "noPos": "Works without a POS"
+    "noPos": "Works without a POS",
+    "noDelivery": "Not on delivery? MenuDesk checks your in-store margins just the same."
   },
   "problem": {
-    "title": "Most owners know their revenue. Almost none know their margin per dish.",
-    "body": "Money comes in every day, but nothing tells you whether your most popular plate is earning or bleeding. Ingredient costs drift upward quietly, and you find out at the end of the month when nothing is left.",
+    "title": "Growing, and still not profitable",
+    "body": "Ingredients are close to 63% of what a restaurant spends, and they creep up quietly every month. Customers are still careful with money, and raising prices feels like losing them. A lot of small kitchens are losing money without knowing where it goes.",
     "points": {
-      "one": "Popular dishes with margins thin enough to disappear",
-      "two": "Supplier price rises nobody noticed",
-      "three": "Dead stock turning into waste"
+      "one": "Best-sellers with almost nothing left in them",
+      "two": "Delivery-app prices that sit below break-even",
+      "three": "A supplier raises a price and nobody notices"
     }
+  },
+  "delivery": {
+    "title": "The number nobody puts through a calculator",
+    "lead": "A dish that earns well in-store can lose money on every order through an app.",
+    "rowDineIn": "In-store ฿100 — cost ฿35 — you keep ฿65",
+    "rowApp": "On the app ฿100 — 30% commission + VAT ฿32.10 — packaging ฿5 — you keep ฿27.90",
+    "conclusion": "To earn what you earn in-store, the app price has to be ฿155 — not ฿120.",
+    "note": "Illustrative arithmetic · MenuDesk calculates from your real menu and the platforms you actually use"
   },
   "howItWorks": {
     "title": "How it works",
-    "subtitle": "Three steps, two minutes",
+    "subtitle": "Three steps, done in 2 minutes",
     "step1": {
-      "title": "Photograph your whole menu",
-      "body": "Open the link, shoot every menu page. No signup, no login."
+      "title": "Photograph the whole menu",
+      "body": "Open the link and photograph every page. No signup, no login."
     },
     "step2": {
-      "title": "AI reads it and estimates cost",
-      "body": "We read dish names and the prices already printed on your menu, then estimate ingredient cost from standard recipes and market prices."
+      "title": "Tap your ingredient price ranges",
+      "body": "No typing. Tap where you buy, then tap a price range for the 5–6 ingredients that matter most."
     },
     "step3": {
-      "title": "See which dishes to worry about",
-      "body": "A green / amber / red ranking, each with a concrete action to take."
+      "title": "See where the money leaks",
+      "body": "Every dish, what it earns, whether to raise the price and by how much — and how far under you are on the delivery apps."
     }
   },
   "honesty": {
@@ -80,37 +90,53 @@
   },
   "pricing": {
     "title": "Pricing",
-    "subtitle": "Start free. Pay when you want real numbers and want it watching for you.",
-    "perMonth": "/month",
+    "subtitle": "Start free. Pay when it pays for itself.",
+    "period": "/month",
     "free": {
       "name": "Free",
       "price": "฿0",
-      "tagline": "See where the money leaks",
-      "f1": "One full-restaurant analysis",
-      "f2": "Green / amber / red ranking",
-      "f3": "Figures shown as estimated ranges",
-      "cta": "Start now"
+      "tagline": "Find out if your menu has a problem",
+      "features": [
+        "Scan your whole menu",
+        "See which dishes are a worry",
+        "Check delivery pricing on 1 platform",
+        "No signup, no card"
+      ],
+      "cta": "Photograph your menu"
     },
-    "tier2": {
-      "name": "Accurate",
-      "price": "฿199",
-      "promo": "First month ฿99",
-      "tagline": "Real numbers from your real costs",
-      "f1": "Cost and margin per dish from your recipes and purchase prices",
-      "f2": "Test a price change and see the effect",
-      "f3": "Menu-engineering matrix",
-      "cta": "Choose this"
+    "basic": {
+      "name": "Basic watch",
+      "price": "฿99",
+      "tagline": "Knows your menu",
+      "features": [
+        "Costs refreshed for you every month",
+        "Alerts when an ingredient goes up",
+        "Delivery pricing checked on every platform",
+        "Which dishes to reprice, and by how much",
+        "Which dishes to cut",
+        "Ask about a new dish any time in LINE"
+      ],
+      "cta": "Start at ฿99"
     },
-    "tier3": {
-      "name": "Watched",
+    "pro": {
+      "name": "Full watch",
       "price": "฿399",
-      "tagline": "Stop checking. It tells you on LINE.",
-      "f1": "Weekly bleed summary to LINE",
-      "f2": "Instant alert when a supplier raises prices",
-      "f3": "Dead-stock flags",
-      "cta": "Choose this"
+      "tagline": "Knows your sales",
+      "features": [
+        "Everything in ฿99",
+        "What this month cost you, in baht",
+        "What to push and what to cut, from real sales",
+        "A weekly summary in LINE",
+        "In-store vs app margin, dish by dish"
+      ],
+      "cta": "Upgrade"
     },
-    "footnote": "Cancel anytime. Prices include tax. Pay by PromptPay or card."
+    "prepaid": "Pay ahead if you like · ฿270/3 months · ฿499/6 months"
+  },
+  "guarantee": {
+    "title": "If it doesn't pay, we refund it",
+    "body": "If we don't find at least ฿1,000 of fixable leak in your first month, you get the money back in full. No explanation needed.",
+    "note": "Applies to the ฿99 plan"
   },
   "founder": {
     "title": "Built by people who run a shop",
@@ -118,8 +144,8 @@
     "signature": "Aurasea Co., Ltd. · Nakhon Ratchasima"
   },
   "finalCta": {
-    "title": "Want to know which of your dishes lose money?",
-    "body": "Photograph your menu and see the result in two minutes. Free, no signup.",
+    "title": "Photograph your menu — free",
+    "body": "No signup, no card. Two minutes.",
     "button": "Photograph your menu — free"
   },
   "footer": {

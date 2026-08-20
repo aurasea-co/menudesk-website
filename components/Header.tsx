@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { ScanCta } from '@/components/ScanCta';
 
 const SECTIONS = [
+  { key: 'delivery', href: '#delivery' },
   { key: 'howItWorks', href: '#how-it-works' },
   { key: 'honesty', href: '#honesty' },
   { key: 'pricing', href: '#pricing' },
@@ -50,7 +51,11 @@ export function Header() {
               />
             </svg>
           </div>
-          <span className="text-lg font-semibold tracking-tight text-aurasea-ink">
+          {/* Hidden below 400px. On a 360px Android the logo, the locale
+              toggle and the CTA together overflowed and clipped the CTA — and
+              the CTA is the one element on this page that must never be the
+              thing that gets cut. The mark still carries the brand. */}
+          <span className="hidden text-lg font-semibold tracking-tight text-aurasea-ink min-[400px]:inline">
             MenuDesk
           </span>
         </Link>

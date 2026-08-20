@@ -17,3 +17,6 @@ content/
 # ...but the template must be committed: it is how the next person learns
 # which variables the site needs. `.env*` would swallow it silently.
 !.env.example
+
+# tsc --noEmit incremental cache
+*.tsbuildinfo

@@ -40,7 +40,7 @@ export function Hero() {
 
         <p className="mt-7 text-sm text-aurasea-ink/55">{t('trustLine')}</p>
 
-        <div className="mt-5 flex justify-center">
+        <div className="mt-5 flex flex-wrap items-center justify-center gap-2.5">
           <span className="inline-flex items-center gap-2 rounded-full bg-menudesk-olive/12 px-4 py-1.5 text-sm font-medium text-menudesk-olive">
             <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4 shrink-0">
               <path
@@ -53,11 +53,20 @@ export function Hero() {
             </svg>
             {t('noPos')}
           </span>
-        </div>
 
-        <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-aurasea-ink/55">
-          {t('noDelivery')}
-        </p>
+          <span className="inline-flex items-center gap-2 rounded-full bg-menudesk-olive/12 px-4 py-1.5 text-sm font-medium text-menudesk-olive">
+            <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4 shrink-0">
+              <path
+                d="M5 13l4 4L19 7"
+                stroke="currentColor"
+                strokeWidth="2.4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            {t('noDelivery')}
+          </span>
+        </div>
       </div>
     </section>
   );

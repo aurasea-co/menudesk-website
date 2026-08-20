@@ -2,7 +2,7 @@
   "meta": {
     "title": "MenuDesk — find where your restaurant leaks money, in-store and on the apps",
     "description": "Photograph your menu and know in 2 minutes which dishes earn, which lose, and how far under-priced you are on the delivery apps. No POS, no signup — free to try.",
-    "ogTitle": "Same price on the app? You keep less than half the profit.",
+    "ogTitle": "Your best-selling dish might be losing money — in-store and on the apps",
     "ogDescription": "MenuDesk reads your menu from a photo and tells you what to charge — in-store and on the apps. Free, no signup."
   },
   "nav": {
@@ -15,13 +15,13 @@
   },
   "hero": {
     "eyebrow": "For restaurants and cafés with a storefront, across Thailand",
-    "headline": "Same price on the app? You keep less than half the profit.",
-    "subhead": "A 30% commission plus VAT eats your margin quietly, on every plate. MenuDesk reads your menu from a photo and tells you what to charge — in-store and on the apps.",
+    "headline": "Your best-selling dish might be losing money — in-store and on the apps",
+    "subhead": "MenuDesk reads your menu from a photo and tells you which dishes earn and which quietly eat your margin — and if you sell through the apps, how much more the 30% commission and VAT take.",
     "ctaPrimary": "Photograph your menu — free",
     "ctaSecondary": "See how it works",
     "trustLine": "No signup · No card · Takes 2 minutes",
     "noPos": "Works without a POS",
-    "noDelivery": "Not on delivery? MenuDesk checks your in-store margins just the same."
+    "noDelivery": "Works if you never touch the apps"
   },
   "problem": {
     "title": "Growing, and still not profitable",
@@ -38,7 +38,8 @@
     "rowDineIn": "In-store ฿100 — cost ฿35 — you keep ฿65",
     "rowApp": "On the app ฿100 — 30% commission + VAT ฿32.10 — packaging ฿5 — you keep ฿27.90",
     "conclusion": "To earn what you earn in-store, the app price has to be ฿155 — not ฿120.",
-    "note": "Illustrative arithmetic · MenuDesk calculates from your real menu and the platforms you actually use"
+    "note": "Illustrative arithmetic · App-price checking is in development. Today MenuDesk checks your in-store margin on every dish.",
+    "ifNotOnApps": "Not on the apps? Skip this section — the rest still applies in full."
   },
   "howItWorks": {
     "title": "How it works",
@@ -48,12 +49,12 @@
       "body": "Open the link and photograph every page. No signup, no login."
     },
     "step2": {
-      "title": "Tap your ingredient price ranges",
-      "body": "No typing. Tap where you buy, then tap a price range for the 5–6 ingredients that matter most."
+      "title": "AI reads the menu and estimates cost",
+      "body": "It reads the dish names and printed prices itself, then estimates ingredient cost from standard recipes and market prices."
     },
     "step3": {
-      "title": "See where the money leaks",
-      "body": "Every dish, what it earns, whether to raise the price and by how much — and how far under you are on the delivery apps."
+      "title": "See which dishes are a worry",
+      "body": "Every dish ranked green, amber or red, with the price range you should be charging."
     }
   },
   "honesty": {
@@ -99,7 +100,7 @@
       "features": [
         "Scan your whole menu",
         "See which dishes are a worry",
-        "Check delivery pricing on 1 platform",
+        "The price range you should charge",
         "No signup, no card"
       ],
       "cta": "Photograph your menu"
@@ -111,7 +112,7 @@
       "features": [
         "Costs refreshed for you every month",
         "Alerts when an ingredient goes up",
-        "Delivery pricing checked on every platform",
+        "Delivery pricing checked on every platform (coming soon)",
         "Which dishes to reprice, and by how much",
         "Which dishes to cut",
         "Ask about a new dish any time in LINE"
@@ -127,7 +128,7 @@
         "What this month cost you, in baht",
         "What to push and what to cut, from real sales",
         "A weekly summary in LINE",
-        "In-store vs app margin, dish by dish"
+        "In-store vs app margin, dish by dish (coming soon)"
       ],
       "cta": "Upgrade"
     },

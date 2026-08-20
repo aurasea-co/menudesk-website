@@ -47,6 +47,13 @@ export function Delivery() {
         <p className="mt-4 text-sm leading-relaxed text-aurasea-ink/55">
           {t('note')}
         </p>
+
+        {/* Says out loud that this section is skippable. Without it the whole
+            page reads as "for shops that sell on the apps", and roughly half of
+            them close the tab at the headline. */}
+        <p className="mt-5 rounded-xl bg-white/70 px-5 py-3.5 text-sm leading-relaxed text-aurasea-ink/70">
+          {t('ifNotOnApps')}
+        </p>
       </div>
     </section>
   );

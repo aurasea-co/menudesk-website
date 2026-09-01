@@ -9,18 +9,48 @@ const withNextIntl = createNextIntlPlugin('./i18n.ts');
 const APP_ORIGIN = process.env.MENUDESK_APP_ORIGIN;
 
 // Paths owned by the app rather than by this marketing site.
+//
+// Pruned 1 Sep 2026 at the C7 cutover, when MENUDESK_APP_ORIGIN moved from the
+// standalone MenuDesk app to auraseaos. A rewrite is only as good as the route
+// on the other end: forwarding a path the new origin does not serve turns a
+// working page into a 404 on a live domain, which is worse than not rewriting
+// it at all.
+//
+// Each of these was checked against auraseaos's route manifest before removal.
 const APP_PATHS = [
   '/scan',
   '/scan/:path*',
-  '/r/:path*', // result page, opened from LINE
-  '/s/:path*', // public share links
-  '/upgrade/:path*', // paywall
-  '/precise/:path*', // paid accurate flow
-  '/api/scan/:path*',
-  '/api/checkout/:path*',
-  '/api/dish/:path*',
-  '/api/precise/:path*',
+  // Covers both the result page and /r/s/:token, the forwarded artefact —
+  // auraseaos serves the shared rendering underneath /r/ precisely so one
+  // rewrite carries both.
+  '/r/:path*',
+  '/api/scan/:path*', // analyze + share
 ];
+
+// REMOVED at the cutover, with what each one was:
+//
+//   /upgrade/:path*       MenuDesk's paywall. Live on this domain until today.
+//                         auraseaos has no /upgrade route — C6 collapsed the
+//                         two billing implementations and deliberately shipped
+//                         the paywall without a CTA, because /pricing sits
+//                         behind the authenticated route group. Restore this
+//                         line when C6's payment path lands.
+//   /precise/:path*       The paid accurate flow. Not ported.
+//   /s/:path*             MenuDesk's share links. auraseaos publishes shared
+//                         results at /r/s/:token instead, already covered above.
+//                         Was already 404ing here.
+//   /api/checkout/:path*  MenuDesk's PromptPay checkout. C6 ported the QR
+//                         generator only; there is no checkout route yet, and
+//                         no merchant target configured.
+//   /api/dish/:path*      Not ported.
+//   /api/precise/:path*   Not ported.
+//
+// Nothing on this marketing site linked to any of them — the only app link it
+// renders is SCAN_URL. They were reachable only by a direct link from the old
+// funnel, which produced one scan in total.
+//
+// The old app is still deployed at menudesk-app.vercel.app for two weeks
+// (C7 item 4), so any of these can still be reached there if needed.
 
 // Deliberately NOT proxied, and it should stay that way:
 //   /admin, /api/admin/*  — concierge tooling, reachable only at the app origin

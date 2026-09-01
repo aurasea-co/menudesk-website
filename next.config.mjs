@@ -25,6 +25,17 @@ const APP_PATHS = [
   // rewrite carries both.
   '/r/:path*',
   '/api/scan/:path*', // analyze + share
+  // LINE Login, added 1 Sep 2026. This one is here for a specific reason: the
+  // visitor starts at menudesk.ai/scan, and if the OAuth callback landed on
+  // app.auraseaos.com she would change origin mid-flow and her session cookie
+  // would not follow. In the LINE in-app browser that is the single most
+  // likely way the whole funnel breaks — it is what the webview checklist's
+  // step 13 exists to catch. Keeping the callback on this domain keeps the
+  // entire round trip on one origin.
+  //
+  // The Callback URL registered in the LINE console must match exactly:
+  //   https://www.menudesk.ai/api/auth/line/callback
+  '/api/auth/line/:path*',
 ];
 
 // REMOVED at the cutover, with what each one was:

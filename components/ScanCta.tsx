@@ -1,4 +1,4 @@
-import { SCAN_URL, scanUrlIsExternal } from '@/lib/scan-url';
+import { SCAN_ENTRY_URL, scanUrlIsExternal } from '@/lib/scan-url';
 
 // The site's only call to action. §19 is explicit that there is exactly one —
 // never "request a demo", never "contact sales". Keeping it in a single
@@ -27,7 +27,7 @@ export function ScanCta({
 
   return (
     <a
-      href={SCAN_URL}
+      href={SCAN_ENTRY_URL}
       {...(scanUrlIsExternal
         ? { target: '_blank', rel: 'noopener noreferrer' }
         : {})}

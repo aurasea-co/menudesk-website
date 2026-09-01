@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { ScanCta } from '@/components/ScanCta';
-import { SCAN_URL, scanUrlIsExternal } from '@/lib/scan-url';
+import { SCAN_ENTRY_URL, scanUrlIsExternal } from '@/lib/scan-url';
 
 // Three tiers: free / ฿99 / ฿399. The ฿199 tier is retired.
 //
@@ -88,7 +88,7 @@ export function Pricing() {
                     <ScanCta label={t(`${tier}.cta`)} size="md" className="w-full" />
                   ) : (
                     <a
-                      href={SCAN_URL}
+                      href={SCAN_ENTRY_URL}
                       {...(scanUrlIsExternal
                         ? { target: '_blank', rel: 'noopener noreferrer' }
                         : {})}

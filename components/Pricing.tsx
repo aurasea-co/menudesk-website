@@ -2,7 +2,15 @@ import { useTranslations } from 'next-intl';
 import { ScanCta } from '@/components/ScanCta';
 import { SCAN_ENTRY_URL, scanUrlIsExternal } from '@/lib/scan-url';
 
-// Three tiers: free / ฿99 / ฿399. The ฿199 tier is retired.
+// Three tiers: free / ฿199 / ฿399.
+//
+// This said "free / ฿99 / ฿399. The ฿199 tier is retired." — the losing side of
+// a conflict the bible settled on 27 Aug 2026. Bible §12 is a RULE about this
+// exact number: "Anchor at ฿199, discount to ฿99. Never list at ฿99 — you
+// cannot anchor low and raise later, and a flat ฿99 reads as a toy." The
+// schema agrees: migration 049's one real payment row is amount 99, recurring
+// 199. So ฿199 is the price and ฿99 is a first month, shown beneath it and
+// never on its own.
 //
 // Feature lists are arrays and differ in length by tier, so they are read with
 // t.raw rather than numbered f1..fn keys — adding a bullet is then a copy edit,
@@ -56,6 +64,14 @@ export function Pricing() {
                   )}
                 </div>
 
+                {/* §12: the first month is never shown without the list price
+                    above it. Only the ฿199 tier has one. */}
+                {tier === 'basic' && (
+                  <p className="mt-2 text-sm font-medium text-menudesk-olive">
+                    {t('basic.firstMonth')}
+                  </p>
+                )}
+
                 <p className="mt-4 text-base leading-relaxed text-aurasea-ink/70">
                   {t(`${tier}.tagline`)}
                 </p>
@@ -103,7 +119,6 @@ export function Pricing() {
           })}
         </div>
 
-        <p className="mt-8 text-center text-sm text-aurasea-ink/50">{t('prepaid')}</p>
       </div>
     </section>
   );

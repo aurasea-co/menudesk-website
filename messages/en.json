@@ -107,7 +107,7 @@
     },
     "basic": {
       "name": "Basic watch",
-      "price": "฿99",
+      "price": "฿199",
       "tagline": "Knows your menu",
       "features": [
         "Costs refreshed for you every month",
@@ -117,27 +117,27 @@
         "Which dishes to cut",
         "Ask about a new dish any time in LINE"
       ],
-      "cta": "Start at ฿99"
+      "cta": "Start at ฿199",
+      "firstMonth": "First month ฿99"
     },
     "pro": {
       "name": "Full watch",
       "price": "฿399",
       "tagline": "Knows your sales",
       "features": [
-        "Everything in ฿99",
+        "Everything in Basic watch",
         "What this month cost you, in baht",
         "What to push and what to cut, from real sales",
         "A weekly summary in LINE",
         "In-store vs app margin, dish by dish (coming soon)"
       ],
       "cta": "Upgrade"
-    },
-    "prepaid": "Pay ahead if you like · ฿270/3 months · ฿499/6 months"
+    }
   },
   "guarantee": {
     "title": "If it doesn't pay, we refund it",
     "body": "If we don't find at least ฿1,000 of fixable leak in your first month, you get the money back in full. No explanation needed.",
-    "note": "Applies to the ฿99 plan"
+    "note": "Applies to the Basic watch plan"
   },
   "founder": {
     "title": "Built by people who run a shop",

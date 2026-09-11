@@ -151,5 +151,11 @@
     "privacy": "Privacy",
     "terms": "Terms",
     "contact": "Contact"
+  },
+  "partner": {
+    "eyebrow": "Build partners",
+    "title": "Open to build partners — by invitation",
+    "lead": "Pricing announced later",
+    "cta": "Ask to join as a partner"
   }
 }

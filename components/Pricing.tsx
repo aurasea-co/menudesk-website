@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl';
+import { showPricing } from '@/lib/pricing-visibility';
 import { ScanCta } from '@/components/ScanCta';
 import { SCAN_ENTRY_URL, scanUrlIsExternal } from '@/lib/scan-url';
 
@@ -23,6 +24,11 @@ import { SCAN_ENTRY_URL, scanUrlIsExternal } from '@/lib/scan-url';
 const TIERS = ['free', 'basic', 'pro'] as const;
 
 export function Pricing() {
+  // REPLACED, not emptied — the section keeps its id so the nav anchor and
+  // scroll position still work. Every tier below (free / ฿199 / ฿399 and the
+  // ฿99 first month) is untouched and returns when the flag flips.
+  if (!showPricing()) return <PartnerInvitation />;
+
   const t = useTranslations('pricing');
 
   return (
@@ -119,6 +125,26 @@ export function Pricing() {
           })}
         </div>
 
+      </div>
+    </section>
+  );
+}
+
+
+function PartnerInvitation() {
+  const t = useTranslations('partner');
+  return (
+    <section id="pricing" className="py-24 md:py-32">
+      <div className="mx-auto max-w-3xl px-6 text-center">
+        <p className="text-sm font-medium uppercase tracking-widest opacity-70">{t('eyebrow')}</p>
+        <h2 className="mt-4 text-3xl md:text-4xl font-semibold tracking-tight">{t('title')}</h2>
+        <p className="mt-4 text-lg opacity-80">{t('lead')}</p>
+        {/* The scan entry is this site's own primary action and already
+            exists — reusing it keeps ONE call to action on the screen rather
+            than adding a second beside it. */}
+        <div className="mt-8 flex justify-center">
+          <ScanCta label={t('cta')} />
+        </div>
       </div>
     </section>
   );

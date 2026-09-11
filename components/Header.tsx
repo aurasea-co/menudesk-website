@@ -4,12 +4,14 @@ import { useLocale, useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ScanCta } from '@/components/ScanCta';
+import { showPricing } from '@/lib/pricing-visibility';
 
 const SECTIONS = [
   { key: 'delivery', href: '#delivery' },
   { key: 'howItWorks', href: '#how-it-works' },
   { key: 'honesty', href: '#honesty' },
-  { key: 'pricing', href: '#pricing' },
+  // Hidden while the section invites partners rather than quoting a price.
+  ...(showPricing() ? [{ key: 'pricing' as const, href: '#pricing' }] : []),
 ] as const;
 
 export function Header() {

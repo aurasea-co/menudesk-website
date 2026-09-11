@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "check:no-pricing": "node scripts/check-no-pricing.mjs"
   },
   "dependencies": {
     "next": "^15.5.18",
